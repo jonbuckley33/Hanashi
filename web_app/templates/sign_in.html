@@ -1,0 +1,23 @@
+{% extends main_layout %}
+
+{% block page_title %} Sign In {% endblock %}
+
+{% block body %}
+    <h3>please sign in</h3>
+    <div class="row">
+        <form role="form">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" id="username" placeholder="username here...">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="password here...">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+{% endblock %}
